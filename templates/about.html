@@ -1,0 +1,179 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ text.nav_about }} - Green Planet{% endblock %}
+
+{% block content %}
+<!-- About Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content fade-in-up">
+            <h1>{{ text.nav_about }}</h1>
+            <p class="subtitle">
+                {% if lang == 'en' %}
+                Discover the fascinating details about our home planet
+                {% elif lang == 'ja' %}
+                私たちの故郷である惑星の魅力的な詳細を発見しよう
+                {% else %}
+                Khám phá những chi tiết hấp dẫn về hành tinh quê hương của chúng ta
+                {% endif %}
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Earth Details Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">
+            {% if lang == 'en' %}Earth's Vital Statistics{% elif lang == 'ja' %}地球の重要統計{% else %}Thống kê quan trọng của Trái Đất{% endif %}
+        </h2>
+        <div class="cards-grid">
+            <div class="card">
+                <h3>🌐 
+                    {% if lang == 'en' %}Size and Structure{% elif lang == 'ja' %}サイズと構造{% else %}Kích thước và cấu trúc{% endif %}
+                </h3>
+                <p>
+                    {% if lang == 'en' %}
+                    Earth has a diameter of about 12,742 km and is composed of several layers: the crust, mantle, outer core, and inner core. 
+                    Our planet's surface area is approximately 510 million square kilometers.
+                    {% elif lang == 'ja' %}
+                    地球の直径は約12,742kmで、地殻、マントル、外核、内核という複数の層で構成されています。
+                    私たちの惑星の表面積は約5億1千万平方キロメートルです。
+                    {% else %}
+                    Trái Đất có đường kính khoảng 12.742 km và được cấu tạo từ nhiều lớp: vỏ Trái Đất, lớp phủ, lõi ngoài và lõi trong.
+                    Diện tích bề mặt hành tinh của chúng ta là khoảng 510 triệu km vuông.
+                    {% endif %}
+                </p>
+            </div>
+            <div class="card">
+                <h3>🌊 
+                    {% if lang == 'en' %}Oceans and Water{% elif lang == 'ja' %}海洋と水{% else %}Đại dương và nước{% endif %}
+                </h3>
+                <p>
+                    {% if lang == 'en' %}
+                    About 71% of Earth's surface is covered by water, with oceans containing roughly 97% of all water on the planet. 
+                    The average depth of the oceans is about 3,800 meters.
+                    {% elif lang == 'ja' %}
+                    地球の表面の約71%が水で覆われており、海洋には地球上のすべての水の約97%が含まれています。
+                    海洋の平均深度は約3,800メートルです。
+                    {% else %}
+                    Khoảng 71% bề mặt Trái Đất được bao phủ bởi nước, với các đại dương chứa khoảng 97% tổng lượng nước trên hành tinh.
+                    Độ sâu trung bình của các đại dương là khoảng 3.800 mét.
+                    {% endif %}
+                </p>
+            </div>
+            <div class="card">
+                <h3>🌡️ 
+                    {% if lang == 'en' %}Climate Systems{% elif lang == 'ja' %}気候システム{% else %}Hệ thống khí hậu{% endif %}
+                </h3>
+                <p>
+                    {% if lang == 'en' %}
+                    Earth's climate is regulated by complex interactions between the atmosphere, oceans, land, and ice. 
+                    The average global temperature is about 15°C (59°F).
+                    {% elif lang == 'ja' %}
+                    地球の気候は、大気、海洋、陸地、氷の間の複雑な相互作用によって調節されています。
+                    世界平均気温は約15°C（59°F）です。
+                    {% else %}
+                    Khí hậu Trái Đất được điều hòa bởi những tương tác phức tạp giữa khí quyển, đại dương, đất liền và băng.
+                    Nhiệt độ trung bình toàn cầu là khoảng 15°C (59°F).
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Biodiversity Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">
+            {% if lang == 'en' %}Incredible Biodiversity{% elif lang == 'ja' %}驚くべき生物多様性{% else %}Đa dạng sinh học đáng kinh ngạc{% endif %}
+        </h2>
+        <div class="intro-content">
+            <p>
+                {% if lang == 'en' %}
+                Earth is home to an estimated 8.7 million species, though scientists believe we have only discovered 
+                about 1.2 million of them. From the smallest microorganisms to the largest whales, our planet 
+                supports an incredible array of life forms that have adapted to virtually every environment imaginable.
+                {% elif lang == 'ja' %}
+                地球には推定870万種の生物が生息していますが、科学者たちはそのうち約120万種しか発見されていないと考えています。
+                最小の微生物から最大のクジラまで、私たちの惑星は想像できるほとんどすべての環境に適応した
+                信じられないほど多様な生命体を支えています。
+                {% else %}
+                Trái Đất là ngôi nhà của khoảng 8,7 triệu loài được ước tính, mặc dù các nhà khoa học tin rằng chúng ta 
+                chỉ mới khám phá được khoảng 1,2 triệu trong số đó. Từ những vi sinh vật nhỏ nhất đến những con cá voi lớn nhất, 
+                hành tinh của chúng ta hỗ trợ một loạt các dạng sống đáng kinh ngạc đã thích nghi với hầu hết mọi môi trường có thể tưởng tượng.
+                {% endif %}
+            </p>
+        </div>
+        <div class="highlights-grid">
+            <div class="highlight-item">
+                <span class="highlight-icon">🦋</span>
+                <h3>
+                    {% if lang == 'en' %}Insects{% elif lang == 'ja' %}昆虫{% else %}Côn trùng{% endif %}
+                </h3>
+                <p>
+                    {% if lang == 'en' %}
+                    Over 1 million known species, representing about 80% of all animal life
+                    {% elif lang == 'ja' %}
+                    100万種以上が知られており、全動物生命の約80%を占める
+                    {% else %}
+                    Hơn 1 triệu loài đã biết, chiếm khoảng 80% tất cả động vật sống
+                    {% endif %}
+                </p>
+            </div>
+            <div class="highlight-item">
+                <span class="highlight-icon">🐠</span>
+                <h3>
+                    {% if lang == 'en' %}Marine Life{% elif lang == 'ja' %}海洋生物{% else %}Sinh vật biển{% endif %}
+                </h3>
+                <p>
+                    {% if lang == 'en' %}
+                    Over 250,000 known marine species, with many more yet to be discovered
+                    {% elif lang == 'ja' %}
+                    25万種以上の海洋生物が知られており、さらに多くが発見を待っている
+                    {% else %}
+                    Hơn 250.000 loài sinh vật biển đã biết, với nhiều loài khác vẫn chưa được khám phá
+                    {% endif %}
+                </p>
+            </div>
+            <div class="highlight-item">
+                <span class="highlight-icon">🌿</span>
+                <h3>
+                    {% if lang == 'en' %}Plant Kingdom{% elif lang == 'ja' %}植物界{% else %}Thế giới thực vật{% endif %}
+                </h3>
+                <p>
+                    {% if lang == 'en' %}
+                    Approximately 400,000 plant species, from tiny mosses to giant sequoias
+                    {% elif lang == 'ja' %}
+                    小さなコケから巨大なセコイアまで、約40万の植物種
+                    {% else %}
+                    Khoảng 400.000 loài thực vật, từ rêu nhỏ bé đến cây sekuoia khổng lồ
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Conservation Section -->
+<section class="wisdom">
+    <div class="container">
+        <div class="wisdom-content">
+            <h2>
+                {% if lang == 'en' %}Our Responsibility{% elif lang == 'ja' %}私たちの責任{% else %}Trách nhiệm của chúng ta{% endif %}
+            </h2>
+            <div class="wisdom-quote">
+                {% if lang == 'en' %}
+                "The Earth does not belong to us; we belong to the Earth. All things are connected like the blood that unites one family."
+                {% elif lang == 'ja' %}
+                「地球は私たちのものではない。私たちが地球のものなのだ。すべてのものは一つの家族を結ぶ血のようにつながっている。」
+                {% else %}
+                "Trái Đất không thuộc về chúng ta; chúng ta thuộc về Trái Đất. Tất cả mọi thứ đều được kết nối như dòng máu gắn kết một gia đình."
+                {% endif %}
+            </div>
+            <div class="wisdom-author">- Chief Seattle</div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

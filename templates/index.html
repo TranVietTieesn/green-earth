@@ -1,0 +1,231 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- Hero Section with Dynamic Background -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>{{ text.hero_welcome }}<br><span style="color: var(--primary-green);">{{ text.hero_title }}</span></h1>
+            <p class="subtitle">{{ text.hero_subtitle }}</p>
+            
+            <div class="hero-buttons">
+                <a href="{{ url_for('features') }}" class="btn btn-primary">
+                    🌱 {{ text.btn_explore }}
+                </a>
+                <a href="{{ url_for('about') }}" class="btn btn-secondary">
+                    📚 {{ text.btn_learn }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                <span class="stat-number" data-count="4.5">4.5B</span>
+                <div class="stat-label">{{ text.stats_age }}</div>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                <span class="stat-number" data-count="71">71%</span>
+                <div class="stat-label">{{ text.stats_ocean }}</div>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                <span class="stat-number" data-count="8.7">8.7M</span>
+                <div class="stat-label">{{ text.stats_species }}</div>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                <span class="stat-number" data-count="8.0">8.0B</span>
+                <div class="stat-label">{{ text.stats_population }}</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Introduction Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">{{ text.intro_title }}</h2>
+        <div class="intro-content" data-aos="fade-up" data-aos-delay="200">
+            <p>
+                {% if lang == 'en' %}
+                Earth, our magnificent blue planet, is the only known celestial body that harbors life in the universe. 
+                From the depths of the oceans to the peaks of the highest mountains, from the polar ice caps to the tropical rainforests, 
+                our planet is a complex and beautiful ecosystem that has evolved over billions of years.
+                {% elif lang == 'ja' %}
+                地球は、宇宙で生命を宿すことが知られている唯一の天体です。
+                海の深さから最高峰の山々まで、極地の氷冠から熱帯雨林まで、
+                私たちの惑星は何十億年もかけて進化してきた複雑で美しい生態系です。
+                {% else %}
+                Trái Đất, hành tinh xanh tuyệt đẹp của chúng ta, là thiên thể duy nhất được biết đến trong vũ trụ có sự sống.
+                Từ đáy đại dương sâu thẳm đến những đỉnh núi cao nhất, từ các chỏm băng cực đến rừng mưa nhiệt đới,
+                hành tinh của chúng ta là một hệ sinh thái phức tạp và tuyệt đẹp đã tiến hóa qua hàng tỷ năm.
+                {% endif %}
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- World Examples Section -->
+<section class="section" style="background: var(--light-green);">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">{{ text.world_examples_title }}</h2>
+        <div class="cards-grid">
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <h3>🌿 
+                    {% if lang == 'en' %}Renewable Energy{% elif lang == 'ja' %}再生可能エネルギー{% else %}Năng lượng tái tạo{% endif %}
+                </h3>
+                <p>
+                    {% if lang == 'en' %}
+                    Countries worldwide are investing in solar, wind, and hydroelectric power to reduce carbon emissions and protect our environment.
+                    {% elif lang == 'ja' %}
+                    世界各国が太陽光、風力、水力発電に投資し、炭素排出量を削減し環境を保護しています。
+                    {% else %}
+                    Các quốc gia trên thế giới đang đầu tư vào năng lượng mặt trời, gió và thủy điện để giảm phát thải carbon và bảo vệ môi trường.
+                    {% endif %}
+                </p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
+                <h3>🌳 
+                    {% if lang == 'en' %}Reforestation Projects{% elif lang == 'ja' %}森林再生プロジェクト{% else %}Dự án tái trồng rừng{% endif %}
+                </h3>
+                <p>
+                    {% if lang == 'en' %}
+                    Global initiatives are planting billions of trees to combat deforestation and restore natural habitats for wildlife.
+                    {% elif lang == 'ja' %}
+                    世界的な取り組みにより、森林破壊に対抗し、野生生物の自然生息地を回復するために数十億本の木が植えられています。
+                    {% else %}
+                    Các sáng kiến toàn cầu đang trồng hàng tỷ cây để chống phá rừng và khôi phục môi trường sống tự nhiên cho động vật hoang dã.
+                    {% endif %}
+                </p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+                <h3>🌊 
+                    {% if lang == 'en' %}Ocean Conservation{% elif lang == 'ja' %}海洋保護{% else %}Bảo tồn đại dương{% endif %}
+                </h3>
+                <p>
+                    {% if lang == 'en' %}
+                    Marine protection areas and cleanup initiatives are working to preserve ocean ecosystems and reduce plastic pollution.
+                    {% elif lang == 'ja' %}
+                    海洋保護区域と清掃活動により、海洋生態系の保護とプラスチック汚染の削減に取り組んでいます。
+                    {% else %}
+                    Các khu bảo tồn biển và các sáng kiến dọn dẹp đang nỗ lực bảo vệ hệ sinh thái đại dương và giảm ô nhiễm nhựa.
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Earth Highlights -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">{{ text.highlights_title }}</h2>
+        <div class="highlights-grid">
+            <div class="highlight-item" data-aos="zoom-in" data-aos-delay="100">
+                <span class="highlight-icon">🌍</span>
+                <h3>
+                    {% if lang == 'en' %}Diverse Ecosystems{% elif lang == 'ja' %}多様な生態系{% else %}Hệ sinh thái đa dạng{% endif %}
+                </h3>
+                <p>
+                    {% if lang == 'en' %}
+                    From rainforests to deserts, Earth hosts an incredible variety of life forms and environments.
+                    {% elif lang == 'ja' %}
+                    熱帯雨林から砂漠まで、地球は信じられないほど多様な生命体と環境を育んでいます。
+                    {% else %}
+                    Từ rừng mưa đến sa mạc, Trái Đất chứa đựng một sự đa dạng đáng kinh ngạc của các dạng sống và môi trường.
+                    {% endif %}
+                </p>
+            </div>
+            <div class="highlight-item" data-aos="zoom-in" data-aos-delay="200">
+                <span class="highlight-icon">💧</span>
+                <h3>
+                    {% if lang == 'en' %}Water Cycle{% elif lang == 'ja' %}水循環{% else %}Chu trình nước{% endif %}
+                </h3>
+                <p>
+                    {% if lang == 'en' %}
+                    The continuous movement of water through evaporation, condensation, and precipitation sustains all life.
+                    {% elif lang == 'ja' %}
+                    蒸発、凝縮、降水による水の連続的な移動が全ての生命を支えています。
+                    {% else %}
+                    Sự chuyển động liên tục của nước qua bay hơi, ngưng tụ và kết tủa duy trì mọi sự sống.
+                    {% endif %}
+                </p>
+            </div>
+            <div class="highlight-item" data-aos="zoom-in" data-aos-delay="300">
+                <span class="highlight-icon">🌱</span>
+                <h3>
+                    {% if lang == 'en' %}Oxygen Production{% elif lang == 'ja' %}酸素生産{% else %}Sản xuất oxy{% endif %}
+                </h3>
+                <p>
+                    {% if lang == 'en' %}
+                    Plants and phytoplankton produce the oxygen we breathe through photosynthesis.
+                    {% elif lang == 'ja' %}
+                    植物と植物プランクトンが光合成によって私たちが呼吸する酸素を生産しています。
+                    {% else %}
+                    Thực vật và thực vật phù du sản xuất oxy mà chúng ta thở qua quá trình quang hợp.
+                    {% endif %}
+                </p>
+            </div>
+            <div class="highlight-item" data-aos="zoom-in" data-aos-delay="400">
+                <span class="highlight-icon">🌟</span>
+                <h3>
+                    {% if lang == 'en' %}Magnetic Field{% elif lang == 'ja' %}磁場{% else %}Từ trường{% endif %}
+                </h3>
+                <p>
+                    {% if lang == 'en' %}
+                    Earth's magnetic field protects us from harmful solar radiation and cosmic rays.
+                    {% elif lang == 'ja' %}
+                    地球の磁場は有害な太陽放射線や宇宙線から私たちを守っています。
+                    {% else %}
+                    Từ trường Trái Đất bảo vệ chúng ta khỏi bức xạ mặt trời có hại và tia vũ trụ.
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="section" style="background: var(--gradient-surface);">
+    <div class="container">
+        <div class="intro-content" data-aos="fade-up">
+            <h2 style="color: var(--primary-green); margin-bottom: var(--space-6);">
+                {% if lang == 'en' %}Take Action for Our Planet{% elif lang == 'ja' %}私たちの惑星のために行動を{% else %}Hành động vì hành tinh của chúng ta{% endif %}
+            </h2>
+            <p style="margin-bottom: var(--space-8);">
+                {% if lang == 'en' %}
+                Every small action counts in protecting our beautiful planet. Join the global movement to preserve Earth for future generations.
+                {% elif lang == 'ja' %}
+                美しい地球を守るために、小さな行動の一つ一つが重要です。未来の世代のために地球を保護する世界的な運動に参加しましょう。
+                {% else %}
+                Mỗi hành động nhỏ đều có ý nghĩa trong việc bảo vệ hành tinh xinh đẹp của chúng ta. Hãy tham gia phong trào toàn cầu bảo vệ Trái Đất cho các thế hệ tương lai.
+                {% endif %}
+            </p>
+            <div class="hero-buttons">
+                <a href="{{ url_for('about') }}" class="btn btn-primary">
+                    🌱 
+                    {% if lang == 'en' %}Learn More{% elif lang == 'ja' %}詳しく学ぶ{% else %}Tìm hiểu thêm{% endif %}
+                </a>
+                <a href="{{ url_for('features') }}" class="btn btn-secondary">
+                    🚀 
+                    {% if lang == 'en' %}Explore Features{% elif lang == 'ja' %}特徴を探る{% else %}Khám phá đặc điểm{% endif %}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Wisdom Quote Section -->
+<section class="wisdom">
+    <div class="container">
+        <div class="wisdom-content" data-aos="fade-up">
+            <h2>{{ text.wisdom_title }}</h2>
+            <div class="wisdom-quote">{{ text.footer_quote }}</div>
+            <div class="wisdom-author">{{ text.footer_author }}</div>
+        </div>
+    </div>
+</section>
+{% endblock %} 
