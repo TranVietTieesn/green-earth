@@ -12,8 +12,7 @@ A modern, responsive website celebrating our planet Earth. Powered by Next.js an
 
 ## 🚀 Quick Start
 
-```bash
-git clone <repository-url>
+git clone https://github.com/TranVietTieesn/green-earth.git
 cd green-earth
 npm install         # or yarn
 npm run dev         # or yarn dev
