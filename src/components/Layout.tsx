@@ -188,7 +188,7 @@ export default function Layout({ children }: LayoutProps) {
             
             <div className="border-t border-slate-800 pt-6">
               <p className="text-slate-400">
-                &copy; 2025 {t.hero_title}. Made with VTea for our beautiful Earth 🌍
+                &copy; 2025 {t.hero_title}. Made by VTea for our beautiful Earth 🌍
               </p>
             </div>
           </div>
