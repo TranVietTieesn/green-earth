@@ -25,33 +25,28 @@ src/
 ├── contexts/       # React context (e.g., language)
 ├── pages/          # App pages (Next.js routing)
 ├── styles/         # Global styles (Tailwind)
-🛠 Technologies
+
+## 🛠 Technologies
+
 Next.js 14 – Framework for fast, production-grade React apps
-
 TypeScript – Safer, more scalable development
-
 Tailwind CSS – Utility-first styling
-
 Framer Motion – Elegant animations
-
 Lucide React – Icon library
 
-🌐 Internationalization (i18n)
+## 🌐 Internationalization (i18n)
+
 Default language: English (en)
-
 Supports: Japanese (ja) and Vietnamese (vi)
-
 Language switching handled client-side with localStorage persistence
 
-📱 Responsive Design
+## 📱 Responsive Design
 Mobile-first layout with adaptive breakpoints:
-
 Mobile: <768px
-
 Tablet: 768–1024px
-
 Desktop: >1024px
-⚙️ Build & Deployment
+
+# #⚙️ Build & Deployment
 Production build
 bash
 npm run build
