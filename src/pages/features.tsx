@@ -1,5 +1,9 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
+import ClimateChart from '@/components/ClimateChart';
+import GlassCard from '@/components/GlassCard';
+import ParticleBackground from '@/components/ParticleBackground';
 
 export default function Features() {
   const { language, t } = useLanguage();
@@ -199,31 +203,42 @@ export default function Features() {
                 ? 'Each biome and natural phenomenon plays a crucial role in maintaining Earth\'s delicate balance.'
                 : language === 'ja'
                 ? '各バイオームと自然現象は、地球の微妙なバランスを維持する上で重要な役割を果たしています。'
-                : 'Mỗi quần xã sinh vật và hiện tượng tự nhiên đều đóng vai trò quan trọng trong việc duy trì sự cân bằng của Trái Đất.'
+                : 'Mỗi quần xã sinh vật và hiện tượng tự nhiên đều đóng vai trò quan trọng trong việc duy trì sự cân bằng tinh tế của Trái Đất.'
               }
             </p>
-            
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">195</div>
-                <div className="opacity-90">
-                  {language === 'en' ? 'Countries' : language === 'ja' ? '国' : 'Quốc gia'}
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">15%</div>
-                <div className="opacity-90">
-                  {language === 'en' ? 'Protected Areas' : language === 'ja' ? '保護区域' : 'Khu vực được bảo vệ'}
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">1M+</div>
-                <div className="opacity-90">
-                  {language === 'en' ? 'Species at Risk' : language === 'ja' ? '危険な種' : 'Loài đang gặp nguy hiểm'}
-                </div>
-              </div>
-            </div>
           </div>
+        </div>
+      </section>
+
+      {/* Climate Data Section */}
+      <section className="section-padding bg-gradient-to-br from-slate-50 to-blue-50 relative">
+        <ParticleBackground particleCount={20} />
+        <div className="container-custom relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">
+              {language === 'en' 
+                ? 'Climate Monitoring' 
+                : language === 'ja' 
+                ? '気候監視' 
+                : 'Giám sát khí hậu'
+              }
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              {language === 'en'
+                ? 'Track real-time climate data and understand the changes affecting our planet'
+                : language === 'ja'
+                ? 'リアルタイムの気候データを追跡し、私たちの惑星に影響を与える変化を理解する'
+                : 'Theo dõi dữ liệu khí hậu thời gian thực và hiểu những thay đổi ảnh hưởng đến hành tinh của chúng ta'
+              }
+            </p>
+          </motion.div>
+          
+          <ClimateChart />
         </div>
       </section>
     </div>

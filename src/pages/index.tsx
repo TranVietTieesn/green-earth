@@ -199,22 +199,22 @@ export default function Home() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               {language === 'en' 
-                ? 'Take Action for Our Planet' 
+                ? 'Join the Movement to Protect Our Planet' 
                 : language === 'ja' 
-                ? '私たちの惑星のために行動を' 
-                : 'Hành động vì hành tinh của chúng ta'
+                ? '地球を守る運動に参加しよう' 
+                : 'Tham gia phong trào bảo vệ hành tinh của chúng ta'
               }
             </h2>
-            <p className="text-xl mb-8 opacity-90">
+            <p className="text-xl opacity-90 mb-8">
               {language === 'en'
-                ? 'Every small action counts in protecting our beautiful planet. Join the global movement to preserve Earth for future generations.'
+                ? 'Every action counts. Together, we can preserve Earth\'s beauty for future generations.'
                 : language === 'ja'
-                ? '私たちの美しい惑星を守るために、小さな行動でも大切です。未来の世代のために地球を保護する世界的な運動に参加しましょう。'
-                : 'Mọi hành động nhỏ đều có ý nghĩa trong việc bảo vệ hành tinh xinh đẹp của chúng ta. Hãy tham gia phong trào toàn cầu để bảo tồn Trái Đất cho các thế hệ tương lai.'
+                ? 'すべての行動が重要です。一緒に、未来の世代のために地球の美しさを保護しましょう。'
+                : 'Mọi hành động đều có ý nghĩa. Cùng nhau, chúng ta có thể bảo tồn vẻ đẹp của Trái Đất cho các thế hệ tương lai.'
               }
             </p>
-            <Link href="/features" className="btn bg-white text-primary-600 hover:bg-slate-100">
-              🌱 {t.btn_explore}
+            <Link href="/about" className="btn bg-white text-primary-600 hover:bg-slate-100 text-lg px-8 py-4">
+              🌱 {language === 'en' ? 'Learn How to Help' : language === 'ja' ? '支援方法を学ぶ' : 'Tìm hiểu cách giúp đỡ'}
             </Link>
           </div>
         </div>
