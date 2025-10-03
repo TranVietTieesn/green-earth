@@ -15,210 +15,304 @@ export default function Home() {
 
   const highlights = [
     {
-      emoji: '🌍',
-      title: language === 'en' ? 'Diverse Ecosystems' : language === 'ja' ? '多様な生態系' : 'Hệ sinh thái đa dạng',
-      description: language === 'en' 
-        ? 'From rainforests to deserts, Earth hosts an incredible variety of life forms and environments.'
-        : language === 'ja' 
-        ? '熱帯雨林から砂漠まで、地球は信じられないほど多様な生命体と環境を育んでいます。'
-        : 'Từ rừng mưa đến sa mạc, Trái Đất chứa đựng một sự đa dạng đáng kinh ngạc của các dạng sống và môi trường.',
+      title:
+        language === 'en'
+          ? 'Resilient biomes'
+          : language === 'ja'
+          ? 'たくましい生物圏'
+          : 'Các quần xã kiên cường',
+      description:
+        language === 'en'
+          ? 'From misty forests to coral cities, Earth balances climates, minerals, and living systems in harmony.'
+          : language === 'ja'
+          ? '霧の森からサンゴ礁の街まで、地球は気候や鉱物、生態系の調和を保っています。'
+          : 'Từ rừng sương mù đến những thành phố san hô, Trái Đất cân bằng khí hậu, khoáng chất và hệ sinh thái trong sự hài hòa.',
     },
     {
-      emoji: '💧',
-      title: language === 'en' ? 'Water Cycle' : language === 'ja' ? '水循環' : 'Chu trình nước',
-      description: language === 'en'
-        ? 'The continuous movement of water through evaporation, condensation, and precipitation sustains all life.'
-        : language === 'ja'
-        ? '蒸発、凝縮、降水による水の連続的な移動が全ての生命を支えています。'
-        : 'Sự chuyển động liên tục của nước qua bay hơi, ngưng tụ và kết tủa duy trì mọi sự sống.',
+      title:
+        language === 'en'
+          ? 'Water in motion'
+          : language === 'ja'
+          ? '巡る水'
+          : 'Dòng nước vận hành',
+      description:
+        language === 'en'
+          ? 'Rivers, rain, and clouds sustain every community, carrying nutrients from mountain peaks to the sea.'
+          : language === 'ja'
+          ? '川や雨、雲が栄養を運び、山頂から海まであらゆる命を支えています。'
+          : 'Sông ngòi, mưa và mây nuôi dưỡng mọi cộng đồng, đưa dưỡng chất từ đỉnh núi ra biển cả.',
     },
     {
-      emoji: '🌱',
-      title: language === 'en' ? 'Oxygen Production' : language === 'ja' ? '酸素生産' : 'Sản xuất oxy',
-      description: language === 'en'
-        ? 'Plants and phytoplankton produce the oxygen we breathe through photosynthesis.'
-        : language === 'ja'
-        ? '植物と植物プランクトンが光合成によって私たちが呼吸する酸素を生産しています。'
-        : 'Thực vật và thực vật phù du sản xuất oxy mà chúng ta thở qua quá trình quang hợp.',
-    },
-    {
-      emoji: '🛡️',
-      title: language === 'en' ? 'Magnetic Field' : language === 'ja' ? '磁場' : 'Từ trường',
-      description: language === 'en'
-        ? 'Earth\'s magnetic field protects us from harmful solar radiation and cosmic rays.'
-        : language === 'ja'
-        ? '地球の磁場は有害な太陽放射線や宇宙線から私たちを守っています。'
-        : 'Từ trường Trái Đất bảo vệ chúng ta khỏi bức xạ mặt trời có hại và tia vũ trụ.',
+      title:
+        language === 'en'
+          ? 'Shared atmosphere'
+          : language === 'ja'
+          ? '分かち合う大気'
+          : 'Bầu khí quyển chung',
+      description:
+        language === 'en'
+          ? 'Oceans and forests craft the air we breathe, reminding us that care for nature is care for one another.'
+          : language === 'ja'
+          ? '海と森が私たちの呼吸する空気をつくり、自然を大切にすることは互いを思いやることだと教えてくれます。'
+          : 'Đại dương và rừng tạo nên bầu không khí chúng ta hít thở, nhắc nhở rằng bảo vệ thiên nhiên là bảo vệ lẫn nhau.',
     },
   ];
 
   const initiatives = [
     {
-      emoji: '💨',
-      title: language === 'en' ? 'Renewable Energy' : language === 'ja' ? '再生可能エネルギー' : 'Năng lượng tái tạo',
-      description: language === 'en'
-        ? 'Countries worldwide are investing in solar, wind, and hydroelectric power to reduce carbon emissions and protect our environment.'
-        : language === 'ja'
-        ? '世界各国が太陽光、風力、水力発電に投資し、炭素排出量を削減し環境を保護しています。'
-        : 'Các quốc gia trên thế giới đang đầu tư vào năng lượng mặt trời, gió và thủy điện để giảm phát thải carbon và bảo vệ môi trường.',
+      emoji: '💡',
+      title:
+        language === 'en'
+          ? 'Cities turning solar'
+          : language === 'ja'
+          ? 'ソーラー化が進む都市'
+          : 'Thành phố hướng tới năng lượng mặt trời',
+      description:
+        language === 'en'
+          ? 'Neighborhood microgrids light up homes with community-owned energy and new green jobs.'
+          : language === 'ja'
+          ? '地域のマイクログリッドが、コミュニティ所有の電力と新しいグリーン雇用で暮らしを照らします。'
+          : 'Các lưới điện siêu nhỏ cung cấp năng lượng sở hữu cộng đồng và tạo việc làm xanh mới.',
     },
     {
-      emoji: '🌳',
-      title: language === 'en' ? 'Reforestation Projects' : language === 'ja' ? '森林再生プロジェクト' : 'Dự án tái trồng rừng',
-      description: language === 'en'
-        ? 'Global initiatives are planting billions of trees to combat deforestation and restore natural habitats for wildlife.'
-        : language === 'ja'
-        ? '世界的な取り組みにより、森林破壊に対抗し、野生生物の自然生息地を回復するために数十億本の木が植えられています。'
-        : 'Các sáng kiến toàn cầu đang trồng hàng tỷ cây để chống phá rừng và khôi phục môi trường sống tự nhiên cho động vật hoang dã.',
+      emoji: '🌿',
+      title:
+        language === 'en'
+          ? 'Restoring wild spaces'
+          : language === 'ja'
+          ? '野生の空間を再生'
+          : 'Phục hồi vùng hoang dã',
+      description:
+        language === 'en'
+          ? 'Indigenous-led stewardship revives wetlands, grasslands, and the species that call them home.'
+          : language === 'ja'
+          ? '先住民が主導する管理が湿地や草原、そこに暮らす生き物をよみがえらせています。'
+          : 'Sự quản lý của cộng đồng bản địa làm sống lại vùng đất ngập nước, đồng cỏ và những loài sinh sống ở đó.',
     },
     {
-      emoji: '♻️',
-      title: language === 'en' ? 'Ocean Conservation' : language === 'ja' ? '海洋保護' : 'Bảo tồn đại dương',
-      description: language === 'en'
-        ? 'Marine protection areas and cleanup initiatives are working to preserve ocean ecosystems and reduce plastic pollution.'
-        : language === 'ja'
-        ? '海洋保護区域と清掃活動により、海洋生態系の保護とプラスチック汚染の削減に取り組んでいます。'
-        : 'Các khu bảo tồn biển và các sáng kiến dọn dẹp đang nỗ lực bảo vệ hệ sinh thái đại dương và giảm ô nhiễm nhựa.',
+      emoji: '🌊',
+      title:
+        language === 'en'
+          ? 'Cleaning coastal currents'
+          : language === 'ja'
+          ? '海流を守る清掃'
+          : 'Làm sạch dòng hải lưu ven bờ',
+      description:
+        language === 'en'
+          ? 'Floating booms capture plastics before they drift offshore, keeping reefs and fisheries thriving.'
+          : language === 'ja'
+          ? '沿岸で漂流する前に浮遊ブームがプラスチックを回収し、サンゴ礁と漁場を守ります。'
+          : 'Hệ thống chắn nổi thu gom nhựa trước khi trôi ra khơi, bảo vệ rạn san hô và ngư trường.',
+    },
+  ];
+
+  const actions = [
+    {
+      title:
+        language === 'en'
+          ? 'Choose reusables first'
+          : language === 'ja'
+          ? '繰り返し使えるものを選ぶ'
+          : 'Ưu tiên đồ tái sử dụng',
+      description:
+        language === 'en'
+          ? 'Carry bottles, utensils, and bags you love to cut single-use plastic from daily routines.'
+          : language === 'ja'
+          ? 'お気に入りのボトルやカトラリー、バッグを持ち歩き、使い捨てプラスチックを減らしましょう。'
+          : 'Mang theo chai nước, dụng cụ và túi yêu thích để giảm nhựa dùng một lần mỗi ngày.',
+    },
+    {
+      title:
+        language === 'en'
+          ? 'Eat with the seasons'
+          : language === 'ja'
+          ? '旬を味わう'
+          : 'Ăn theo mùa vụ',
+      description:
+        language === 'en'
+          ? 'Seasonal produce lowers transport emissions and keeps local growers thriving.'
+          : language === 'ja'
+          ? '旬の食材は輸送時の排出を減らし、地域の生産者を支えます。'
+          : 'Nông sản theo mùa giúp giảm phát thải vận chuyển và hỗ trợ nông dân địa phương.',
+    },
+    {
+      title:
+        language === 'en'
+          ? 'Move mindfully'
+          : language === 'ja'
+          ? '地球にやさしい移動'
+          : 'Di chuyển thân thiện',
+      description:
+        language === 'en'
+          ? 'Walk, cycle, carshare, or ride transit to explore your city with a lighter footprint.'
+          : language === 'ja'
+          ? '歩く・自転車に乗る・シェアする・公共交通を使って、軽やかに街を楽しみましょう。'
+          : 'Đi bộ, đạp xe, đi chung xe hoặc dùng phương tiện công cộng để khám phá thành phố một cách bền vững.',
+    },
+    {
+      title:
+        language === 'en'
+          ? 'Champion local stories'
+          : language === 'ja'
+          ? '地域の物語を広める'
+          : 'Lan tỏa câu chuyện địa phương',
+      description:
+        language === 'en'
+          ? 'Share climate wins and challenges so neighbors feel informed, hopeful, and ready to act.'
+          : language === 'ja'
+          ? '気候に関する成功と課題を共有し、地域の人々が希望と行動力を持てるようにしましょう。'
+          : 'Chia sẻ thành công và thách thức về khí hậu để cộng đồng thêm hiểu biết, hy vọng và sẵn sàng hành động.',
     },
   ];
 
   return (
     <div className="overflow-hidden">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-emerald-50 to-slate-50 earth-grid">
-        <div className="container-custom text-center z-10">
-          <div className="mb-8">
-            <div className="text-8xl md:text-9xl animate-spin-slow">🌍</div>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance">
-            {t.hero_welcome}
-            <br />
-            <span className="text-gradient">{t.hero_title}</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto text-balance">
-            {t.hero_subtitle}
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/features" className="btn btn-primary">
-              ✨ {t.btn_explore}
-            </Link>
-            <Link href="/about" className="btn btn-secondary">
-              🌍 {t.btn_learn}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="section-padding bg-white">
+      <section className="hero-section">
+        <div className="hero-aurora" aria-hidden />
+        <div className="hero-glow" aria-hidden />
         <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <Counter 
-                  end={stat.value} 
-                  suffix={stat.suffix}
-                  decimals={stat.suffix === 'B' || stat.suffix === 'M' ? 1 : 0}
-                />
-                <p className="text-slate-600 mt-2 font-medium">{stat.label}</p>
+          <div className="hero-layout">
+            <div className="hero-copy">
+              <span className="hero-kicker">{t.hero_welcome}</span>
+              <h1 className="hero-title">
+                <span>{t.hero_title}</span>
+              </h1>
+              <p className="hero-subtitle">{t.hero_subtitle}</p>
+              <div className="hero-actions">
+                <Link href="/features" className="btn btn-primary">
+                  ✨ {t.btn_explore}
+                </Link>
+                <Link href="/about" className="btn btn-secondary">
+                  🌍 {t.btn_learn}
+                </Link>
               </div>
-            ))}
+            </div>
+
+            <div className="hero-panel">
+              <h2 className="panel-title">
+                {language === 'en'
+                  ? 'Why this planet matters'
+                  : language === 'ja'
+                  ? '地球が大切である理由'
+                  : 'Vì sao hành tinh này quan trọng'}
+              </h2>
+              <ul className="panel-list">
+                {highlights.map((item, index) => (
+                  <li key={index}>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Introduction Section */}
+      <section className="section-padding bg-white">
+        <div className="container-custom stats-grid">
+          {stats.map((stat, index) => (
+            <div key={index} className="stat-card">
+              <Counter
+                end={stat.value}
+                suffix={stat.suffix}
+                decimals={stat.suffix === 'B' || stat.suffix === 'M' ? 1 : 0}
+              />
+              <p>{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="section-padding bg-slate-50">
         <div className="container-custom">
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gradient">
-              {t.intro_title}
-            </h2>
-            <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
-              {language === 'en' 
-                ? 'Earth, our magnificent blue planet, is the only known celestial body that harbors life in the universe. From the depths of the oceans to the peaks of the highest mountains, from the polar ice caps to the tropical rainforests, our planet is a complex and beautiful ecosystem that has evolved over billions of years.'
-                : language === 'ja'
-                ? '地球は、宇宙で生命を宿すことが知られている唯一の天体です。海の深さから最高峰の山々まで、極地の氷冠から熱帯雨林まで、私たちの惑星は何十億年もかけて進化してきた複雑で美しい生態系です。'
-                : 'Trái Đất, hành tinh xanh tuyệt đẹp của chúng ta, là thiên thể duy nhất được biết đến trong vũ trụ có sự sống. Từ đáy đại dương sâu thẳm đến những đỉnh núi cao nhất, từ các chỏm băng cực đến rừng mưa nhiệt đới, hành tinh của chúng ta là một hệ sinh thái phức tạp và tuyệt đẹp đã tiến hóa qua hàng tỷ năm.'
-              }
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* World Initiatives Section */}
-      <section className="section-padding bg-gradient-to-br from-primary-50 to-emerald-50">
-        <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gradient">
-            {t.world_examples_title}
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {initiatives.map((initiative, index) => (
-              <div key={index} className="card group">
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-primary-100 rounded-xl mr-4 group-hover:bg-primary-200 transition-colors">
-                    <span className="text-2xl">{initiative.emoji}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold">{initiative.title}</h3>
-                </div>
-                <p className="text-slate-600 leading-relaxed">{initiative.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Earth Highlights */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gradient">
-            {t.highlights_title}
-          </h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {highlights.map((highlight, index) => (
-              <div key={index} className="text-center group">
-                <div className="bg-gradient-to-br from-primary-500 to-emerald-500 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform animate-float">
-                  <span className="text-2xl">{highlight.emoji}</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-4">{highlight.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{highlight.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="section-padding bg-gradient-to-r from-primary-600 to-emerald-600 text-white">
-        <div className="container-custom text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              {language === 'en' 
-                ? 'Join the Movement to Protect Our Planet' 
-                : language === 'ja' 
-                ? '地球を守る運動に参加しよう' 
-                : 'Tham gia phong trào bảo vệ hành tinh của chúng ta'
-              }
-            </h2>
-            <p className="text-xl opacity-90 mb-8">
+          <div className="section-header">
+            <h2>
               {language === 'en'
-                ? 'Every action counts. Together, we can preserve Earth\'s beauty for future generations.'
+                ? 'Global movements in motion'
                 : language === 'ja'
-                ? 'すべての行動が重要です。一緒に、未来の世代のために地球の美しさを保護しましょう。'
-                : 'Mọi hành động đều có ý nghĩa. Cùng nhau, chúng ta có thể bảo tồn vẻ đẹp của Trái Đất cho các thế hệ tương lai.'
-              }
+                ? '世界で進むサステナブルな動き'
+                : 'Những phong trào toàn cầu đang chuyển mình'}
+            </h2>
+            <p>
+              {language === 'en'
+                ? 'Communities everywhere are designing brighter futures with practical, nature-positive ideas.'
+                : language === 'ja'
+                ? '世界のコミュニティが、自然と共生する実践的なアイデアで明るい未来を描いています。'
+                : 'Các cộng đồng khắp nơi đang kiến tạo tương lai tươi sáng bằng những ý tưởng thực tiễn, tích cực với thiên nhiên.'}
             </p>
-            <Link href="/about" className="btn bg-white text-primary-600 hover:bg-slate-100 text-lg px-8 py-4">
-              🌱 {language === 'en' ? 'Learn How to Help' : language === 'ja' ? '支援方法を学ぶ' : 'Tìm hiểu cách giúp đỡ'}
+          </div>
+
+          <div className="initiative-grid">
+            {initiatives.map((initiative, index) => (
+              <article key={index} className="initiative-card">
+                <div className="initiative-icon">{initiative.emoji}</div>
+                <h3>{initiative.title}</h3>
+                <p>{initiative.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="section-header">
+            <h2>
+              {language === 'en'
+                ? 'Small steps with big impact'
+                : language === 'ja'
+                ? '日々の小さな一歩が大きな変化に'
+                : 'Những bước nhỏ tạo nên thay đổi lớn'}
+            </h2>
+            <p>
+              {language === 'en'
+                ? 'Choose one action this week to celebrate the planet where every story begins.'
+                : language === 'ja'
+                ? '今週は地球を祝うために、ひとつの行動を選んでみませんか。'
+                : 'Hãy chọn một hành động trong tuần này để trân trọng hành tinh khởi nguồn của mọi câu chuyện.'}
+            </p>
+          </div>
+
+          <div className="action-grid">
+            {actions.map((action, index) => (
+              <div key={index} className="action-card">
+                <h3>{action.title}</h3>
+                <p>{action.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding cta-section">
+        <div className="container-custom cta-panel">
+          <div>
+            <h2>
+              {language === 'en'
+                ? 'Ready to build a greener future?'
+                : language === 'ja'
+                ? 'より良い未来を一緒に築きましょう'
+                : 'Sẵn sàng kiến tạo tương lai xanh?'}
+            </h2>
+            <p>
+              {language === 'en'
+                ? 'Explore our guides, stories, and community projects to find your starting point today.'
+                : language === 'ja'
+                ? 'ガイドやストーリー、コミュニティのプロジェクトから、今日できることを見つけてください。'
+                : 'Khám phá hướng dẫn, câu chuyện và dự án cộng đồng để tìm bước khởi đầu ngay hôm nay.'}
+            </p>
+          </div>
+          <div className="hero-actions">
+            <Link href="/features" className="btn btn-primary">
+              🌟 {t.btn_explore}
+            </Link>
+            <Link href="/about" className="btn btn-secondary">
+              📘 {t.btn_learn}
             </Link>
           </div>
         </div>
       </section>
     </div>
   );
-} 
+}
