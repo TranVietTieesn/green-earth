@@ -1,0 +1,161 @@
+{
+    "nav_home": "ホーム",
+    "nav_about": "地球について",
+    "nav_features": "特徴",
+    "hero_welcome": "ようこそ",
+    "hero_title": "緑の惑星へ",
+    "hero_subtitle": "地球の美しさと神秘を発見しよう - 私たちの共通の家",
+    "btn_explore": "今すぐ探索",
+    "btn_learn": "詳しく学ぶ",
+    "stats_age": "億年前に誕生",
+    "stats_ocean": "% 海洋の割合",
+    "stats_species": "万種の生物",
+    "stats_population": "億人の人口",
+    "intro_title": "地球 - 宇宙の青い宝石",
+    "world_examples_title": "世界の地球保護の取り組み",
+    "highlights_title": "地球の神秘",
+    "wisdom_title": "日本の自然哲学",
+    "footer_quote": "「地球は私たちから祖先から受け継いだものではなく、子どもたちから借りているものである」",
+    "footer_author": "- ネイティブアメリカンの格言",
+    "hero_panel_title": "地球が大切である理由",
+    "hero_highlights": [
+        {
+            "title": "たくましい生物圏",
+            "description": "霧の森からサンゴ礁の街まで、地球は気候や鉱物、生態系の調和を保っています。"
+        },
+        {
+            "title": "巡る水",
+            "description": "川や雨、雲が栄養を運び、山頂から海まであらゆる命を支えています。"
+        },
+        {
+            "title": "分かち合う大気",
+            "description": "海と森が私たちの呼吸する空気をつくり、自然を大切にすることは互いを思いやることだと教えてくれます。"
+        }
+    ],
+    "initiatives_heading": "世界で進むサステナブルな動き",
+    "initiatives_description": "世界のコミュニティが、自然と共生する実践的なアイデアで明るい未来を描いています。",
+    "initiatives": [
+        {
+            "icon": "Lightbulb",
+            "title": "ソーラー化が進む都市",
+            "description": "地域のマイクログリッドが、コミュニティ所有の電力と新しいグリーン雇用で暮らしを照らします。"
+        },
+        {
+            "icon": "Sprout",
+            "title": "野生の空間を再生",
+            "description": "先住民が主導する管理が湿地や草原、そこに暮らす生き物をよみがえらせています。"
+        },
+        {
+            "icon": "Waves",
+            "title": "海流を守る清掃",
+            "description": "沿岸で漂流する前に浮遊ブームがプラスチックを回収し、サンゴ礁と漁場を守ります。"
+        }
+    ],
+    "actions_heading": "日々の小さな一歩が大きな変化に",
+    "actions_description": "今週は地球を祝うために、ひとつの行動を選んでみませんか。",
+    "actions": [
+        {
+            "title": "繰り返し使えるものを選ぶ",
+            "description": "お気に入りのボトルやカトラリー、バッグを持ち歩き、使い捨てプラスチックを減らしましょう。"
+        },
+        {
+            "title": "旬を味わう",
+            "description": "旬の食材は輸送時の排出を減らし、地域の生産者を支えます。"
+        },
+        {
+            "title": "地球にやさしい移動",
+            "description": "歩く・自転車に乗る・シェアする・公共交通を使って、軽やかに街を楽しみましょう。"
+        },
+        {
+            "title": "地域の物語を広める",
+            "description": "気候に関する成功と課題を共有し、地域の人々が希望と行動力を持てるようにしましょう。"
+        }
+    ],
+    "cta_title": "より良い未来を一緒に築きましょう",
+    "cta_description": "ガイドやストーリー、コミュニティのプロジェクトから、今日できることを見つけてください。",
+    "about_hero_subtitle": "私たちの故郷である惑星の魅力的な科学と信じられないほどの美しさを発見する",
+    "about_facts_title": "数字で見る地球",
+    "about_structure_title": "地球の構造",
+    "about_history_title": "地球の歴史",
+    "about_cta_title": "私たちの素晴らしい惑星を守る",
+    "about_cta_description": "地球の信じられないほどの複雑さを理解することで、なぜ未来の世代のためにそれを守らなければならないかがわかります。",
+    "facts": [
+        {
+            "icon": "Clock",
+            "title": "年齢",
+            "value": "4.54",
+            "unit": "億年",
+            "description": "地球は約45.4億年前に太陽系星雲からの塵とガスの重力崩壊によって形成されました。"
+        },
+        {
+            "icon": "Thermometer",
+            "title": "平均気温",
+            "value": "15",
+            "unit": "°C",
+            "description": "異なる気候帯の多様な生命体を支える地球全体の平均気温。"
+        },
+        {
+            "icon": "Mountain",
+            "title": "最高点",
+            "value": "8,849",
+            "unit": "m",
+            "description": "エベレスト山は海抜最高峰で、年間約4mmずつ成長し続けています。"
+        },
+        {
+            "icon": "Waves",
+            "title": "最深点",
+            "value": "11,034",
+            "unit": "m",
+            "description": "マリアナ海溝のチャレンジャー海淵は、海洋の最深部として知られています。"
+        }
+    ],
+    "layers": [
+        {
+            "name": "地殻",
+            "thickness": "5-70km",
+            "color": "bg-amber-500",
+            "description": "大陸と海底を含む最外層の固体殻。"
+        },
+        {
+            "name": "マントル",
+            "thickness": "2,900km",
+            "color": "bg-orange-500",
+            "description": "最大の層で、ゆっくりと流れる高温で密度の高い岩石で構成されています。"
+        },
+        {
+            "name": "外核",
+            "thickness": "2,300km",
+            "color": "bg-red-500",
+            "description": "地球の磁場を生成する液体の鉄とニッケル。"
+        },
+        {
+            "name": "内核",
+            "thickness": "1,220km",
+            "color": "bg-yellow-400",
+            "description": "極端な圧力と温度下での固体の鉄とニッケル。"
+        }
+    ],
+    "timeline": [
+        {
+            "period": "46億年前",
+            "event": "地球の形成",
+            "description": "太陽系の形成と宇宙の塵と破片からの初期地球の発達。"
+        },
+        {
+            "period": "38億年前",
+            "event": "最初の生命",
+            "description": "地球の原始海洋で単純な単細胞生物が出現。"
+        },
+        {
+            "period": "25億年前",
+            "event": "酸素大気",
+            "description": "シアノバクテリアが酸素を生産し始め、今日知られている大気を作り出す。"
+        },
+        {
+            "period": "5億4000万年前",
+            "event": "カンブリア爆発",
+            "description": "生命体の急速な多様化と複雑な生物の出現。"
+        }
+    ],
+    "core_label": "コア"
+}

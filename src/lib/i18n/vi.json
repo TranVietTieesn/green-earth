@@ -1,0 +1,161 @@
+{
+    "nav_home": "Trang Chủ",
+    "nav_about": "Về Trái Đất",
+    "nav_features": "Đặc Điểm",
+    "hero_welcome": "Chào Mừng Đến Với",
+    "hero_title": "Hành Tinh Xanh",
+    "hero_subtitle": "Khám phá vẻ đẹp và sự kỳ diệu của Trái Đất - ngôi nhà chung của chúng ta",
+    "btn_explore": "Khám Phá Ngay",
+    "btn_learn": "Tìm Hiểu Thêm",
+    "stats_age": "tỷ năm tuổi",
+    "stats_ocean": "% bề mặt là nước",
+    "stats_species": "triệu loài sinh vật",
+    "stats_population": "tỷ dân số",
+    "intro_title": "Trái Đất - Viên Ngọc Xanh Của Vũ Trụ",
+    "world_examples_title": "Các Sáng Kiến Bảo Vệ Trái Đất Toàn Cầu",
+    "highlights_title": "Những Điều Kỳ Diệu Của Trái Đất",
+    "wisdom_title": "Triết Lý Tự Nhiên",
+    "footer_quote": "\"Chúng ta không thừa hưởng trái đất từ tổ tiên mà mượn nó từ con cháu\"",
+    "footer_author": "- Câu ngạn ngữ của người bản địa Mỹ",
+    "hero_panel_title": "Vì sao hành tinh này quan trọng",
+    "hero_highlights": [
+        {
+            "title": "Các quần xã kiên cường",
+            "description": "Từ rừng sương mù đến những thành phố san hô, Trái Đất cân bằng khí hậu, khoáng chất và hệ sinh thái trong sự hài hòa."
+        },
+        {
+            "title": "Dòng nước vận hành",
+            "description": "Sông ngòi, mưa và mây nuôi dưỡng mọi cộng đồng, đưa dưỡng chất từ đỉnh núi ra biển cả."
+        },
+        {
+            "title": "Bầu khí quyển chung",
+            "description": "Đại dương và rừng tạo nên bầu không khí chúng ta hít thở, nhắc nhở rằng bảo vệ thiên nhiên là bảo vệ lẫn nhau."
+        }
+    ],
+    "initiatives_heading": "Những phong trào toàn cầu đang chuyển mình",
+    "initiatives_description": "Các cộng đồng khắp nơi đang kiến tạo tương lai tươi sáng bằng những ý tưởng thực tiễn, tích cực với thiên nhiên.",
+    "initiatives": [
+        {
+            "icon": "Lightbulb",
+            "title": "Thành phố hướng tới năng lượng mặt trời",
+            "description": "Các lưới điện siêu nhỏ cung cấp năng lượng sở hữu cộng đồng và tạo việc làm xanh mới."
+        },
+        {
+            "icon": "Sprout",
+            "title": "Phục hồi vùng hoang dã",
+            "description": "Sự quản lý của cộng đồng bản địa làm sống lại vùng đất ngập nước, đồng cỏ và những loài sinh sống ở đó."
+        },
+        {
+            "icon": "Waves",
+            "title": "Làm sạch dòng hải lưu ven bờ",
+            "description": "Hệ thống chắn nổi thu gom nhựa trước khi trôi ra khơi, bảo vệ rạn san hô và ngư trường."
+        }
+    ],
+    "actions_heading": "Những bước nhỏ tạo nên thay đổi lớn",
+    "actions_description": "Hãy chọn một hành động trong tuần này để trân trọng hành tinh khởi nguồn của mọi câu chuyện.",
+    "actions": [
+        {
+            "title": "Ưu tiên đồ tái sử dụng",
+            "description": "Mang theo chai nước, dụng cụ và túi yêu thích để giảm nhựa dùng một lần mỗi ngày."
+        },
+        {
+            "title": "Ăn theo mùa vụ",
+            "description": "Nông sản theo mùa giúp giảm phát thải vận chuyển và hỗ trợ nông dân địa phương."
+        },
+        {
+            "title": "Di chuyển thân thiện",
+            "description": "Đi bộ, đạp xe, đi chung xe hoặc dùng phương tiện công cộng để khám phá thành phố một cách bền vững."
+        },
+        {
+            "title": "Lan tỏa câu chuyện địa phương",
+            "description": "Chia sẻ thành công và thách thức về khí hậu để cộng đồng thêm hiểu biết, hy vọng và sẵn sàng hành động."
+        }
+    ],
+    "cta_title": "Sẵn sàng kiến tạo tương lai xanh?",
+    "cta_description": "Khám phá hướng dẫn, câu chuyện và dự án cộng đồng để tìm bước khởi đầu ngay hôm nay.",
+    "about_hero_subtitle": "Khám phá khoa học hấp dẫn và vẻ đẹp không thể tin được của hành tinh quê hương chúng ta",
+    "about_facts_title": "Trái Đất qua con số",
+    "about_structure_title": "Cấu trúc Trái Đất",
+    "about_history_title": "Lịch sử Trái Đất",
+    "about_cta_title": "Bảo vệ hành tinh tuyệt vời của chúng ta",
+    "about_cta_description": "Hiểu được sự phức tạp đáng kinh ngạc của Trái Đất giúp chúng ta nhận thức tại sao phải bảo vệ nó cho các thế hệ tương lai.",
+    "facts": [
+        {
+            "icon": "Clock",
+            "title": "Tuổi",
+            "value": "4.54",
+            "unit": "tỷ năm",
+            "description": "Trái Đất hình thành khoảng 4.54 tỷ năm trước thông qua sự sụp đổ hấp dẫn của bụi và khí từ tinh vân mặt trời."
+        },
+        {
+            "icon": "Thermometer",
+            "title": "Nhiệt độ trung bình",
+            "value": "15",
+            "unit": "°C",
+            "description": "Nhiệt độ trung bình toàn cầu hỗ trợ các dạng sống đa dạng qua các vùng khí hậu khác nhau."
+        },
+        {
+            "icon": "Mountain",
+            "title": "Điểm cao nhất",
+            "value": "8,849",
+            "unit": "m",
+            "description": "Núi Everest, đỉnh cao nhất trên mực nước biển, tiếp tục phát triển khoảng 4mm mỗi năm."
+        },
+        {
+            "icon": "Waves",
+            "title": "Điểm sâu nhất",
+            "value": "11,034",
+            "unit": "m",
+            "description": "Challenger Deep trong rãnh Mariana, điểm sâu nhất được biết đến trong lòng đại dương."
+        }
+    ],
+    "layers": [
+        {
+            "name": "Vỏ Trái Đất",
+            "thickness": "5-70 km",
+            "color": "bg-amber-500",
+            "description": "Lớp vỏ rắn ngoài cùng, bao gồm các lục địa và đáy đại dương."
+        },
+        {
+            "name": "Lớp phủ",
+            "thickness": "2,900 km",
+            "color": "bg-orange-500",
+            "description": "Lớp lớn nhất, bao gồm đá nóng, dày đặc chảy chậm."
+        },
+        {
+            "name": "Lõi ngoài",
+            "thickness": "2,300 km",
+            "color": "bg-red-500",
+            "description": "Sắt và niken lỏng tạo ra từ trường của Trái Đất."
+        },
+        {
+            "name": "Lõi trong",
+            "thickness": "1,220 km",
+            "color": "bg-yellow-400",
+            "description": "Sắt và niken rắn dưới áp suất và nhiệt độ cực cao."
+        }
+    ],
+    "timeline": [
+        {
+            "period": "4.6 tỷ năm trước",
+            "event": "Hình thành Trái Đất",
+            "description": "Hình thành hệ mặt trời và phát triển Trái Đất sơ khai từ bụi và mảnh vỡ vũ trụ."
+        },
+        {
+            "period": "3.8 tỷ năm trước",
+            "event": "Sự sống đầu tiên",
+            "description": "Các sinh vật đơn bào đơn giản xuất hiện trong đại dương nguyên thủy của Trái Đất."
+        },
+        {
+            "period": "2.5 tỷ năm trước",
+            "event": "Khí quyển oxy",
+            "description": "Vi khuẩn lam bắt đầu sản xuất oxy, tạo ra bầu khí quyển mà chúng ta biết ngày nay."
+        },
+        {
+            "period": "540 triệu năm trước",
+            "event": "Vụ nổ Cambrian",
+            "description": "Sự đa dạng hóa nhanh chóng của các dạng sống và sự xuất hiện của các sinh vật phức tạp."
+        }
+    ],
+    "core_label": "Lõi"
+}

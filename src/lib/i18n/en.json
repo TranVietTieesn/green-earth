@@ -1,0 +1,161 @@
+{
+    "nav_home": "Home",
+    "nav_about": "About Earth",
+    "nav_features": "Features",
+    "hero_welcome": "Welcome to",
+    "hero_title": "Green Planet",
+    "hero_subtitle": "Discover the beauty and mystery of Earth - our shared home",
+    "btn_explore": "Explore Now",
+    "btn_learn": "Learn More",
+    "stats_age": "billion years old",
+    "stats_ocean": "% ocean coverage",
+    "stats_species": "million species",
+    "stats_population": "billion people",
+    "intro_title": "Earth - The Blue Gem of the Universe",
+    "world_examples_title": "Global Earth Protection Initiatives",
+    "highlights_title": "Earth's Mysteries",
+    "wisdom_title": "Natural Philosophy",
+    "footer_quote": "\"We do not inherit the earth from our ancestors; we borrow it from our children\"",
+    "footer_author": "- Native American Proverb",
+    "hero_panel_title": "Why this planet matters",
+    "hero_highlights": [
+        {
+            "title": "Resilient biomes",
+            "description": "From misty forests to coral cities, Earth balances climates, minerals, and living systems in harmony."
+        },
+        {
+            "title": "Water in motion",
+            "description": "Rivers, rain, and clouds sustain every community, carrying nutrients from mountain peaks to the sea."
+        },
+        {
+            "title": "Shared atmosphere",
+            "description": "Oceans and forests craft the air we breathe, reminding us that care for nature is care for one another."
+        }
+    ],
+    "initiatives_heading": "Global movements in motion",
+    "initiatives_description": "Communities everywhere are designing brighter futures with practical, nature-positive ideas.",
+    "initiatives": [
+        {
+            "icon": "Lightbulb",
+            "title": "Cities turning solar",
+            "description": "Neighborhood microgrids light up homes with community-owned energy and new green jobs."
+        },
+        {
+            "icon": "Sprout",
+            "title": "Restoring wild spaces",
+            "description": "Indigenous-led stewardship revives wetlands, grasslands, and the species that call them home."
+        },
+        {
+            "icon": "Waves",
+            "title": "Cleaning coastal currents",
+            "description": "Floating booms capture plastics before they drift offshore, keeping reefs and fisheries thriving."
+        }
+    ],
+    "actions_heading": "Small steps with big impact",
+    "actions_description": "Choose one action this week to celebrate the planet where every story begins.",
+    "actions": [
+        {
+            "title": "Choose reusables first",
+            "description": "Carry bottles, utensils, and bags you love to cut single-use plastic from daily routines."
+        },
+        {
+            "title": "Eat with the seasons",
+            "description": "Seasonal produce lowers transport emissions and keeps local growers thriving."
+        },
+        {
+            "title": "Move mindfully",
+            "description": "Walk, cycle, carshare, or ride transit to explore your city with a lighter footprint."
+        },
+        {
+            "title": "Champion local stories",
+            "description": "Share climate wins and challenges so neighbors feel informed, hopeful, and ready to act."
+        }
+    ],
+    "cta_title": "Ready to build a greener future?",
+    "cta_description": "Explore our guides, stories, and community projects to find your starting point today.",
+    "about_hero_subtitle": "Discover the fascinating science and incredible beauty of our home planet",
+    "about_facts_title": "Earth by the Numbers",
+    "about_structure_title": "Earth's Structure",
+    "about_history_title": "Earth's History",
+    "about_cta_title": "Protect Our Amazing Planet",
+    "about_cta_description": "Understanding Earth's incredible complexity helps us appreciate why we must protect it for future generations.",
+    "facts": [
+        {
+            "icon": "Clock",
+            "title": "Age",
+            "value": "4.54",
+            "unit": "billion years",
+            "description": "Earth formed approximately 4.54 billion years ago through gravitational collapse of dust and gas from the solar nebula."
+        },
+        {
+            "icon": "Thermometer",
+            "title": "Average Temperature",
+            "value": "15",
+            "unit": "°C",
+            "description": "The global average temperature that supports diverse life forms across different climate zones."
+        },
+        {
+            "icon": "Mountain",
+            "title": "Highest Point",
+            "value": "8,849",
+            "unit": "m",
+            "description": "Mount Everest, the highest peak above sea level, continues to grow approximately 4mm per year."
+        },
+        {
+            "icon": "Waves",
+            "title": "Deepest Point",
+            "value": "11,034",
+            "unit": "m",
+            "description": "Challenger Deep in the Mariana Trench, the deepest known point in the ocean depths."
+        }
+    ],
+    "layers": [
+        {
+            "name": "Crust",
+            "thickness": "5-70 km",
+            "color": "bg-amber-500",
+            "description": "The outermost solid shell, including continents and ocean floors."
+        },
+        {
+            "name": "Mantle",
+            "thickness": "2,900 km",
+            "color": "bg-orange-500",
+            "description": "The largest layer, composed of hot, dense rock that flows slowly."
+        },
+        {
+            "name": "Outer Core",
+            "thickness": "2,300 km",
+            "color": "bg-red-500",
+            "description": "Liquid iron and nickel that generates Earth's magnetic field."
+        },
+        {
+            "name": "Inner Core",
+            "thickness": "1,220 km",
+            "color": "bg-yellow-400",
+            "description": "Solid iron and nickel under extreme pressure and temperature."
+        }
+    ],
+    "timeline": [
+        {
+            "period": "4.6 billion years ago",
+            "event": "Earth Formation",
+            "description": "Solar system formation and early Earth development from cosmic dust and debris."
+        },
+        {
+            "period": "3.8 billion years ago",
+            "event": "First Life",
+            "description": "Simple single-celled organisms emerge in Earth's primitive oceans."
+        },
+        {
+            "period": "2.5 billion years ago",
+            "event": "Oxygen Atmosphere",
+            "description": "Cyanobacteria begin producing oxygen, creating the atmosphere we know today."
+        },
+        {
+            "period": "540 million years ago",
+            "event": "Cambrian Explosion",
+            "description": "Rapid diversification of life forms and emergence of complex organisms."
+        }
+    ],
+    "core_label": "Core"
+}
