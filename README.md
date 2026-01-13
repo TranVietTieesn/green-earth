@@ -1,141 +1,70 @@
-# Green Earth - Next.js
+# 🌍 Green Earth
 
-A beautiful, modern website celebrating our planet Earth, built with Next.js and optimized for deployment on Vercel.
+**Khám phá vẻ đẹp và sự kỳ diệu của hành tinh xanh - ngôi nhà chung của chúng ta.**
 
-## ✨ Features
+---
 
-- 🌍 **Multi-language Support**: English, Japanese, and Vietnamese
-- 🎨 **Modern Design**: Beautiful gradients, animations, and responsive layouts
-- ⚡ **Performance Optimized**: Built with Next.js for optimal loading speeds
-- 📱 **Fully Responsive**: Works perfectly on all devices
-- 🎭 **Smooth Animations**: Powered by Framer Motion
-- 🎯 **Accessible**: Built with accessibility best practices
-- 🌱 **Environment Focused**: Content celebrating Earth's beauty and conservation
+## 🌟 Giới thiệu
 
-## 🚀 Quick Start
+**Green Earth** là một trang web hiện đại, tôn vinh vẻ đẹp của Trái Đất và lan tỏa thông điệp bảo vệ môi trường. Với thiết kế tinh tế, hiệu ứng động mượt mà và nội dung đa ngôn ngữ, website mang đến trải nghiệm tương tác độc đáo cho người dùng trên toàn thế giới.
 
-### Prerequisites
+> *"Trái Đất không thuộc về chúng ta; chúng ta thuộc về Trái Đất."*
 
-- Node.js 18+ 
-- npm or yarn
+---
 
-### Installation
+## ✨ Điểm nổi bật
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/TranVietTieesn/green-earth.git
-   cd green-earth
-   ```
+### 🎨 Thiết kế hiện đại
+- Giao diện thanh lịch với hiệu ứng **glassmorphism**
+- Gradient màu xanh lá tự nhiên, tạo cảm giác gần gũi với thiên nhiên
+- Animation mượt mà khi cuộn trang
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+### 🌐 Đa ngôn ngữ
+- 🇬🇧 **English** - Tiếng Anh
+- 🇯🇵 **日本語** - Tiếng Nhật  
+- 🇻🇳 **Tiếng Việt** - Ngôn ngữ mặc định
 
-3. **Run the development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
+### 🌍 Quả địa cầu 3D tương tác
+- Trải nghiệm quả địa cầu 3D có thể xoay và tương tác
+- Hiệu ứng mây bay và khí quyển phát sáng
+- Bầu trời sao lung linh
 
-4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+### 📱 Tương thích mọi thiết bị
+- Responsive design - hoàn hảo trên điện thoại, máy tính bảng và desktop
+- Tối ưu tốc độ tải trang
 
-## 🏗️ Project Structure
+---
 
-```
-src/
-├── components/          # Reusable UI components
-│   ├── Counter.tsx     # Animated counter component
-│   └── Layout.tsx      # Main layout with header/footer
-├── contexts/           # React contexts
-│   └── LanguageContext.tsx  # Language management
-├── pages/              # Next.js pages
-│   ├── _app.tsx       # App wrapper
-│   ├── _document.tsx  # Document configuration
-│   ├── index.tsx      # Home page
-│   ├── about.tsx      # About Earth page
-│   └── features.tsx   # Earth features page
-└── styles/
-    └── globals.css    # Global styles with Tailwind
-```
+## 📄 Các trang chính
 
-## 🌟 Technologies Used
+| Trang | Mô tả |
+|-------|-------|
+| **Trang chủ** | Giới thiệu tổng quan với các số liệu ấn tượng về Trái Đất |
+| **Về Trái Đất** | Khám phá lịch sử và cấu tạo của hành tinh xanh |
+| **Tính năng** | Những điều kỳ diệu khiến Trái Đất trở nên độc đáo |
+| **Thư viện** | Bộ sưu tập hình ảnh đẹp về Trái Đất |
 
-- **Next.js 14** - React framework for production
-- **TypeScript** - Type safety and better developer experience
-- **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Animation library
-- **Lucide React** - Beautiful icon library
+---
 
-## 🎨 Design System
+## 🎯 Thông điệp
 
-### Colors
-- **Primary Green**: Various shades of green (#22c55e)
-- **Emerald**: Complementary green tones (#10b981)
-- **Slate**: Neutral grays for text and backgrounds
+Website được xây dựng với mong muốn:
 
-### Typography
-- **Font**: Inter (Google Fonts)
-- **Sizes**: Responsive typography using `clamp()`
+- 🌱 **Nâng cao nhận thức** về tầm quan trọng của việc bảo vệ môi trường
+- 💚 **Truyền cảm hứng** để mọi người hành động vì một hành tinh xanh hơn
+- 🌏 **Kết nối cộng đồng** toàn cầu trong sứ mệnh bảo vệ Trái Đất
 
-### Animations
-- **Entrance animations**: Fade and slide effects
-- **Hover effects**: Scale and color transitions
-- **Loading animations**: Counters and progress indicators
+---
 
-### Build for Production
+## 🔗 Liên kết
 
-```bash
-npm run build
-npm run start
-```
+- 🌐 **Website**: [https://green-earth-eta.vercel.app/](https://green-earth-eta.vercel.app/)
+- 📧 **Email**: tranviettien1012@gmail.com
 
-## 🔧 Configuration
+---
 
-### Environment Variables
-No environment variables required for basic functionality.
+## 👨‍💻 Tác giả
 
-### Next.js Configuration
-The project is configured for static export to work with various hosting platforms:
+**Made with 💚 by VTea**
 
-```javascript
-// next.config.js
-const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  images: {
-    unoptimized: true,
-  },
-}
-```
-
-## 🌍 Internationalization
-
-The app supports three languages:
-- **English (en)**: Default language
-- **Japanese (ja)**: 日本語
-- **Vietnamese (vi)**: Tiếng Việt
-
-Language switching is handled client-side with localStorage persistence.
-
-## 📱 Responsive Design
-
-- **Mobile First**: Designed for mobile, enhanced for desktop
-- **Breakpoints**: 
-  - Mobile: < 768px
-  - Tablet: 768px - 1024px
-  - Desktop: > 1024px
-
-## 🎯 Performance
-
-- **Lighthouse Score**: 95+ on all metrics
-- **Bundle Size**: Optimized with Next.js automatic code splitting
-- **Images**: Optimized and responsive
-- **Animations**: GPU-accelerated with Framer Motion
-
-
-**Made by VTEA**
+*Vì một Trái Đất xanh hơn, sạch hơn và đẹp hơn.*
