@@ -7,9 +7,9 @@ interface ParticleBackgroundProps {
   className?: string;
 }
 
-export default function ParticleBackground({ 
-  particleCount = 50, 
-  className = '' 
+export default function ParticleBackground({
+  particleCount = 50,
+  className = ''
 }: ParticleBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -21,6 +21,8 @@ export default function ParticleBackground({
     if (!ctx) return;
 
     let animationFrameId: number;
+    const canvasWidth = () => canvas.width;
+    const canvasHeight = () => canvas.height;
 
     // Set canvas size
     const resizeCanvas = () => {
@@ -42,8 +44,8 @@ export default function ParticleBackground({
       color: string;
 
       constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
+        this.x = Math.random() * canvasWidth();
+        this.y = Math.random() * canvasHeight();
         this.size = Math.random() * 3 + 1;
         this.speedX = (Math.random() - 0.5) * 0.5;
         this.speedY = (Math.random() - 0.5) * 0.5;
@@ -55,11 +57,14 @@ export default function ParticleBackground({
         this.x += this.speedX;
         this.y += this.speedY;
 
+        const width = canvasWidth();
+        const height = canvasHeight();
+
         // Wrap around edges
-        if (this.x > canvas.width) this.x = 0;
-        if (this.x < 0) this.x = canvas.width;
-        if (this.y > canvas.height) this.y = 0;
-        if (this.y < 0) this.y = canvas.height;
+        if (this.x > width) this.x = 0;
+        if (this.x < 0) this.x = width;
+        if (this.y > height) this.y = 0;
+        if (this.y < 0) this.y = height;
 
         // Gentle opacity animation
         this.opacity += (Math.random() - 0.5) * 0.02;
@@ -67,6 +72,7 @@ export default function ParticleBackground({
       }
 
       draw() {
+        if (!ctx) return;
         ctx.save();
         ctx.globalAlpha = this.opacity;
         ctx.fillStyle = this.color;
@@ -85,6 +91,7 @@ export default function ParticleBackground({
 
     // Animation loop
     const animate = () => {
+      if (!ctx || !canvas) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       particles.forEach((particle, index) => {
@@ -97,7 +104,7 @@ export default function ParticleBackground({
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
+          if (distance < 100 && ctx) {
             ctx.save();
             ctx.globalAlpha = (100 - distance) / 500;
             ctx.strokeStyle = '#22c55e';
@@ -129,4 +136,4 @@ export default function ParticleBackground({
       style={{ background: 'transparent' }}
     />
   );
-} 
+}

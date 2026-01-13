@@ -1,10 +1,33 @@
 import React from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Counter from '@/components/Counter';
+import { Sparkles, Globe, Star, BookOpen, Lightbulb, Sprout, Waves } from 'lucide-react';
+
+const iconMap: Record<string, React.ElementType> = {
+  Lightbulb,
+  Sprout,
+  Waves,
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export default function Home() {
-  const { language, t } = useLanguage();
+  const { t } = useLanguage();
 
   const stats = [
     { value: 4.5, suffix: 'B', label: t.stats_age },
@@ -13,212 +36,275 @@ export default function Home() {
     { value: 8.0, suffix: 'B', label: t.stats_population },
   ];
 
-  const highlights = [
-    {
-      emoji: '🌍',
-      title: language === 'en' ? 'Diverse Ecosystems' : language === 'ja' ? '多様な生態系' : 'Hệ sinh thái đa dạng',
-      description: language === 'en' 
-        ? 'From rainforests to deserts, Earth hosts an incredible variety of life forms and environments.'
-        : language === 'ja' 
-        ? '熱帯雨林から砂漠まで、地球は信じられないほど多様な生命体と環境を育んでいます。'
-        : 'Từ rừng mưa đến sa mạc, Trái Đất chứa đựng một sự đa dạng đáng kinh ngạc của các dạng sống và môi trường.',
-    },
-    {
-      emoji: '💧',
-      title: language === 'en' ? 'Water Cycle' : language === 'ja' ? '水循環' : 'Chu trình nước',
-      description: language === 'en'
-        ? 'The continuous movement of water through evaporation, condensation, and precipitation sustains all life.'
-        : language === 'ja'
-        ? '蒸発、凝縮、降水による水の連続的な移動が全ての生命を支えています。'
-        : 'Sự chuyển động liên tục của nước qua bay hơi, ngưng tụ và kết tủa duy trì mọi sự sống.',
-    },
-    {
-      emoji: '🌱',
-      title: language === 'en' ? 'Oxygen Production' : language === 'ja' ? '酸素生産' : 'Sản xuất oxy',
-      description: language === 'en'
-        ? 'Plants and phytoplankton produce the oxygen we breathe through photosynthesis.'
-        : language === 'ja'
-        ? '植物と植物プランクトンが光合成によって私たちが呼吸する酸素を生産しています。'
-        : 'Thực vật và thực vật phù du sản xuất oxy mà chúng ta thở qua quá trình quang hợp.',
-    },
-    {
-      emoji: '🛡️',
-      title: language === 'en' ? 'Magnetic Field' : language === 'ja' ? '磁場' : 'Từ trường',
-      description: language === 'en'
-        ? 'Earth\'s magnetic field protects us from harmful solar radiation and cosmic rays.'
-        : language === 'ja'
-        ? '地球の磁場は有害な太陽放射線や宇宙線から私たちを守っています。'
-        : 'Từ trường Trái Đất bảo vệ chúng ta khỏi bức xạ mặt trời có hại và tia vũ trụ.',
-    },
-  ];
-
-  const initiatives = [
-    {
-      emoji: '💨',
-      title: language === 'en' ? 'Renewable Energy' : language === 'ja' ? '再生可能エネルギー' : 'Năng lượng tái tạo',
-      description: language === 'en'
-        ? 'Countries worldwide are investing in solar, wind, and hydroelectric power to reduce carbon emissions and protect our environment.'
-        : language === 'ja'
-        ? '世界各国が太陽光、風力、水力発電に投資し、炭素排出量を削減し環境を保護しています。'
-        : 'Các quốc gia trên thế giới đang đầu tư vào năng lượng mặt trời, gió và thủy điện để giảm phát thải carbon và bảo vệ môi trường.',
-    },
-    {
-      emoji: '🌳',
-      title: language === 'en' ? 'Reforestation Projects' : language === 'ja' ? '森林再生プロジェクト' : 'Dự án tái trồng rừng',
-      description: language === 'en'
-        ? 'Global initiatives are planting billions of trees to combat deforestation and restore natural habitats for wildlife.'
-        : language === 'ja'
-        ? '世界的な取り組みにより、森林破壊に対抗し、野生生物の自然生息地を回復するために数十億本の木が植えられています。'
-        : 'Các sáng kiến toàn cầu đang trồng hàng tỷ cây để chống phá rừng và khôi phục môi trường sống tự nhiên cho động vật hoang dã.',
-    },
-    {
-      emoji: '♻️',
-      title: language === 'en' ? 'Ocean Conservation' : language === 'ja' ? '海洋保護' : 'Bảo tồn đại dương',
-      description: language === 'en'
-        ? 'Marine protection areas and cleanup initiatives are working to preserve ocean ecosystems and reduce plastic pollution.'
-        : language === 'ja'
-        ? '海洋保護区域と清掃活動により、海洋生態系の保護とプラスチック汚染の削減に取り組んでいます。'
-        : 'Các khu bảo tồn biển và các sáng kiến dọn dẹp đang nỗ lực bảo vệ hệ sinh thái đại dương và giảm ô nhiễm nhựa.',
-    },
-  ];
+  const highlights = t.hero_highlights;
+  const initiatives = t.initiatives;
+  const actions = t.actions;
 
   return (
-    <div className="overflow-hidden">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-emerald-50 to-slate-50 earth-grid">
-        <div className="container-custom text-center z-10">
-          <div className="mb-8">
-            <div className="text-8xl md:text-9xl animate-spin-slow">🌍</div>
+    <div className="page-shell">
+      <section className="hero-v2">
+        <div className="hero-v2__background" aria-hidden />
+        <div className="hero-v2__glow" aria-hidden />
+        <div className="container-custom">
+          <div className="hero-v2__grid">
+            <motion.div
+              className="hero-v2__copy"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <span className="hero-v2__kicker">{t.hero_welcome}</span>
+              <h1 className="hero-v2__title">{t.hero_title}</h1>
+              <p className="hero-v2__lead">{t.hero_subtitle}</p>
+              <div className="hero-actions">
+                <Link href="/features" className="btn btn-primary">
+                  <Sparkles className="w-5 h-5" />
+                  {t.btn_explore}
+                </Link>
+                <Link href="/about" className="btn btn-secondary">
+                  <Globe className="w-5 h-5" />
+                  {t.btn_learn}
+                </Link>
+              </div>
+              <div className="hero-v2__badges" aria-label={t.hero_panel_title}>
+                {initiatives.map((initiative, index) => (
+                  <motion.span
+                    key={index}
+                    className="hero-v2__badge"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.5 + index * 0.1 }}
+                  >
+                    {initiative.title}
+                  </motion.span>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="hero-v2__panel"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="hero-v2__orb" aria-hidden />
+              <div className="hero-v2__card">
+                <h2>{t.hero_panel_title}</h2>
+                <ul>
+                  {highlights.map((item, index) => (
+                    <li key={index}>
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
           </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance">
-            {t.hero_welcome}
-            <br />
-            <span className="text-gradient">{t.hero_title}</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto text-balance">
-            {t.hero_subtitle}
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        </div>
+      </section>
+
+      <section className="metric-ribbon" aria-label="Planetary indicators">
+        <motion.div
+          className="container-custom metric-ribbon__grid"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {stats.map((stat, index) => (
+            <motion.div key={index} className="metric-card" variants={itemVariants}>
+              <Counter
+                end={stat.value}
+                suffix={stat.suffix}
+                decimals={stat.suffix === 'B' || stat.suffix === 'M' ? 1 : 0}
+              />
+              <p>{stat.label}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </section>
+
+      <section className="section-padding intro-section">
+        <div className="container-custom intro-grid">
+          <motion.div
+            className="intro-card intro-card--primary"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2>{t.intro_title}</h2>
+            <p>{t.hero_panel_title}</p>
+            <div className="intro-points">
+              {highlights.map((item, index) => (
+                <div key={index} className="intro-point">
+                  <span className="intro-point__index">0{index + 1}</span>
+                  <div>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.aside
+            className="intro-card intro-card--secondary"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h3>{t.world_examples_title}</h3>
+            <p>{t.initiatives_description}</p>
+            <ul className="intro-list">
+              {initiatives.map((initiative, index) => {
+                const IconComponent = iconMap[initiative.icon] || Lightbulb;
+                return (
+                  <li key={index}>
+                    <span aria-hidden className="initiative-icon-wrapper">
+                      <IconComponent className="w-6 h-6 text-emerald-500" />
+                    </span>
+                    <div>
+                      <h4>{initiative.title}</h4>
+                      <p>{initiative.description}</p>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </motion.aside>
+        </div>
+      </section>
+
+      <section className="section-padding highlight-section">
+        <div className="container-custom">
+          <div className="section-header">
+            <h2>{t.highlights_title}</h2>
+            <p>{t.hero_subtitle}</p>
+          </div>
+          <motion.div
+            className="highlight-grid"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {highlights.map((item, index) => (
+              <motion.article key={index} className="highlight-card" variants={itemVariants}>
+                <div className="highlight-card__number">0{index + 1}</div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </motion.article>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="section-padding initiative-section">
+        <div className="container-custom">
+          <div className="section-header">
+            <h2>{t.initiatives_heading}</h2>
+            <p>{t.initiatives_description}</p>
+          </div>
+          <motion.div
+            className="initiative-track"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {initiatives.map((initiative, index) => {
+              const IconComponent = iconMap[initiative.icon] || Lightbulb;
+              return (
+                <motion.article key={index} className="initiative-card" variants={itemVariants}>
+                  <div className="initiative-card__icon">
+                    <IconComponent className="w-6 h-6 text-emerald-600" />
+                  </div>
+                  <h3>{initiative.title}</h3>
+                  <p>{initiative.description}</p>
+                </motion.article>
+              );
+            })}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="section-padding action-section">
+        <div className="container-custom">
+          <div className="section-header">
+            <h2>{t.actions_heading}</h2>
+            <p>{t.actions_description}</p>
+          </div>
+          <motion.div
+            className="action-grid"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {actions.map((action, index) => (
+              <motion.div key={index} className="action-card" variants={itemVariants}>
+                <span className="action-card__index">{index + 1}</span>
+                <div>
+                  <h3>{action.title}</h3>
+                  <p>{action.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="section-padding wisdom-section">
+        <div className="container-custom wisdom-panel">
+          <motion.div
+            className="wisdom-panel__content"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2>{t.wisdom_title}</h2>
+            <blockquote>
+              <p>{t.footer_quote}</p>
+              <cite>{t.footer_author}</cite>
+            </blockquote>
+          </motion.div>
+          <div className="wisdom-panel__accent" aria-hidden>
+            <div className="wisdom-panel__orb" />
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding cta-section">
+        <div className="container-custom cta-panel">
+          <motion.div
+            className="cta-panel__copy"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2>{t.cta_title}</h2>
+            <p>{t.cta_description}</p>
+          </motion.div>
+          <motion.div
+            className="cta-panel__actions"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
             <Link href="/features" className="btn btn-primary">
-              ✨ {t.btn_explore}
+              <Star className="w-5 h-5" />
+              {t.btn_explore}
             </Link>
             <Link href="/about" className="btn btn-secondary">
-              🌍 {t.btn_learn}
+              <BookOpen className="w-5 h-5" />
+              {t.btn_learn}
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <Counter 
-                  end={stat.value} 
-                  suffix={stat.suffix}
-                  decimals={stat.suffix === 'B' || stat.suffix === 'M' ? 1 : 0}
-                />
-                <p className="text-slate-600 mt-2 font-medium">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Introduction Section */}
-      <section className="section-padding bg-slate-50">
-        <div className="container-custom">
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gradient">
-              {t.intro_title}
-            </h2>
-            <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
-              {language === 'en' 
-                ? 'Earth, our magnificent blue planet, is the only known celestial body that harbors life in the universe. From the depths of the oceans to the peaks of the highest mountains, from the polar ice caps to the tropical rainforests, our planet is a complex and beautiful ecosystem that has evolved over billions of years.'
-                : language === 'ja'
-                ? '地球は、宇宙で生命を宿すことが知られている唯一の天体です。海の深さから最高峰の山々まで、極地の氷冠から熱帯雨林まで、私たちの惑星は何十億年もかけて進化してきた複雑で美しい生態系です。'
-                : 'Trái Đất, hành tinh xanh tuyệt đẹp của chúng ta, là thiên thể duy nhất được biết đến trong vũ trụ có sự sống. Từ đáy đại dương sâu thẳm đến những đỉnh núi cao nhất, từ các chỏm băng cực đến rừng mưa nhiệt đới, hành tinh của chúng ta là một hệ sinh thái phức tạp và tuyệt đẹp đã tiến hóa qua hàng tỷ năm.'
-              }
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* World Initiatives Section */}
-      <section className="section-padding bg-gradient-to-br from-primary-50 to-emerald-50">
-        <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gradient">
-            {t.world_examples_title}
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {initiatives.map((initiative, index) => (
-              <div key={index} className="card group">
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-primary-100 rounded-xl mr-4 group-hover:bg-primary-200 transition-colors">
-                    <span className="text-2xl">{initiative.emoji}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold">{initiative.title}</h3>
-                </div>
-                <p className="text-slate-600 leading-relaxed">{initiative.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Earth Highlights */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gradient">
-            {t.highlights_title}
-          </h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {highlights.map((highlight, index) => (
-              <div key={index} className="text-center group">
-                <div className="bg-gradient-to-br from-primary-500 to-emerald-500 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform animate-float">
-                  <span className="text-2xl">{highlight.emoji}</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-4">{highlight.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{highlight.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="section-padding bg-gradient-to-r from-primary-600 to-emerald-600 text-white">
-        <div className="container-custom text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              {language === 'en' 
-                ? 'Join the Movement to Protect Our Planet' 
-                : language === 'ja' 
-                ? '地球を守る運動に参加しよう' 
-                : 'Tham gia phong trào bảo vệ hành tinh của chúng ta'
-              }
-            </h2>
-            <p className="text-xl opacity-90 mb-8">
-              {language === 'en'
-                ? 'Every action counts. Together, we can preserve Earth\'s beauty for future generations.'
-                : language === 'ja'
-                ? 'すべての行動が重要です。一緒に、未来の世代のために地球の美しさを保護しましょう。'
-                : 'Mọi hành động đều có ý nghĩa. Cùng nhau, chúng ta có thể bảo tồn vẻ đẹp của Trái Đất cho các thế hệ tương lai.'
-              }
-            </p>
-            <Link href="/about" className="btn bg-white text-primary-600 hover:bg-slate-100 text-lg px-8 py-4">
-              🌱 {language === 'en' ? 'Learn How to Help' : language === 'ja' ? '支援方法を学ぶ' : 'Tìm hiểu cách giúp đỡ'}
-            </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-} 
+}

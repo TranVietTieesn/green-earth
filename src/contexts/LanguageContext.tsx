@@ -1,6 +1,47 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
+import en from '@/lib/i18n/en.json';
+import vi from '@/lib/i18n/vi.json';
+import ja from '@/lib/i18n/ja.json';
+
 export type Language = 'en' | 'ja' | 'vi';
+
+interface HighlightTranslation {
+  title: string;
+  description: string;
+}
+
+interface InitiativeTranslation {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+interface ActionTranslation {
+  title: string;
+  description: string;
+}
+
+interface FactTranslation {
+  icon: string;
+  title: string;
+  value: string;
+  unit: string;
+  description: string;
+}
+
+interface LayerTranslation {
+  name: string;
+  thickness: string;
+  color: string;
+  description: string;
+}
+
+interface TimelineTranslation {
+  period: string;
+  event: string;
+  description: string;
+}
 
 export interface Translations {
   nav_home: string;
@@ -21,69 +62,32 @@ export interface Translations {
   wisdom_title: string;
   footer_quote: string;
   footer_author: string;
+  hero_panel_title: string;
+  hero_highlights: HighlightTranslation[];
+  initiatives_heading: string;
+  initiatives_description: string;
+  initiatives: InitiativeTranslation[];
+  actions_heading: string;
+  actions_description: string;
+  actions: ActionTranslation[];
+  cta_title: string;
+  cta_description: string;
+  about_hero_subtitle: string;
+  about_facts_title: string;
+  about_structure_title: string;
+  about_history_title: string;
+  about_cta_title: string;
+  about_cta_description: string;
+  facts: FactTranslation[];
+  layers: LayerTranslation[];
+  timeline: TimelineTranslation[];
+  core_label: string;
 }
 
 const translations: Record<Language, Translations> = {
-  en: {
-    nav_home: 'Home',
-    nav_about: 'About Earth',
-    nav_features: 'Features',
-    hero_welcome: 'Welcome to',
-    hero_title: 'Green Planet',
-    hero_subtitle: 'Discover the beauty and mystery of Earth - our shared home',
-    btn_explore: 'Explore Now',
-    btn_learn: 'Learn More',
-    stats_age: 'billion years old',
-    stats_ocean: '% ocean coverage',
-    stats_species: 'million species',
-    stats_population: 'billion people',
-    intro_title: 'Earth - The Blue Gem of the Universe',
-    world_examples_title: 'Global Earth Protection Initiatives',
-    highlights_title: 'Earth\'s Mysteries',
-    wisdom_title: 'Natural Philosophy',
-    footer_quote: '"We do not inherit the earth from our ancestors; we borrow it from our children"',
-    footer_author: '- Native American Proverb'
-  },
-  ja: {
-    nav_home: 'ホーム',
-    nav_about: '地球について',
-    nav_features: '特徴',
-    hero_welcome: 'ようこそ',
-    hero_title: '緑の惑星へ',
-    hero_subtitle: '地球の美しさと神秘を発見しよう - 私たちの共通の家',
-    btn_explore: '今すぐ探索',
-    btn_learn: '詳しく学ぶ',
-    stats_age: '億年前に誕生',
-    stats_ocean: '% 海洋の割合',
-    stats_species: '万種の生物',
-    stats_population: '億人の人口',
-    intro_title: '地球 - 宇宙の青い宝石',
-    world_examples_title: '世界の地球保護の取り組み',
-    highlights_title: '地球の神秘',
-    wisdom_title: '日本の自然哲学',
-    footer_quote: '「地球は私たちから祖先から受け継いだものではなく、子どもたちから借りているものである」',
-    footer_author: '- ネイティブアメリカンの格言'
-  },
-  vi: {
-    nav_home: 'Trang Chủ',
-    nav_about: 'Về Trái Đất',
-    nav_features: 'Đặc Điểm',
-    hero_welcome: 'Chào Mừng Đến Với',
-    hero_title: 'Hành Tinh Xanh',
-    hero_subtitle: 'Khám phá vẻ đẹp và sự kỳ diệu của Trái Đất - ngôi nhà chung của chúng ta',
-    btn_explore: 'Khám Phá Ngay',
-    btn_learn: 'Tìm Hiểu Thêm',
-    stats_age: 'tỷ năm tuổi',
-    stats_ocean: '% bề mặt là nước',
-    stats_species: 'triệu loài sinh vật',
-    stats_population: 'tỷ dân số',
-    intro_title: 'Trái Đất - Viên Ngọc Xanh Của Vũ Trụ',
-    world_examples_title: 'Các Sáng Kiến Bảo Vệ Trái Đất Toàn Cầu',
-    highlights_title: 'Những Điều Kỳ Diệu Của Trái Đất',
-    wisdom_title: 'Triết Lý Tự Nhiên',
-    footer_quote: '"Chúng ta không thừa hưởng trái đất từ tổ tiên mà mượn nó từ con cháu"',
-    footer_author: '- Câu ngạn ngữ của người bản địa Mỹ'
-  }
+  en: en as Translations,
+  vi: vi as Translations,
+  ja: ja as Translations,
 };
 
 interface LanguageContextType {
@@ -128,4 +132,4 @@ export function useLanguage() {
     throw new Error('useLanguage must be used within a LanguageProvider');
   }
   return context;
-} 
+}

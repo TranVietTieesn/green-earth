@@ -19,10 +19,10 @@ export default function Counter({ end, suffix = '', decimals = 0, duration = 200
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
-      
+
       const easeOutCubic = 1 - Math.pow(1 - progress, 3);
       const currentCount = end * easeOutCubic;
-      
+
       setCount(currentCount);
 
       if (progress < 1) {
@@ -42,8 +42,9 @@ export default function Counter({ end, suffix = '', decimals = 0, duration = 200
   const displayValue = decimals > 0 ? count.toFixed(decimals) : Math.floor(count).toString();
 
   return (
-    <div className="text-3xl md:text-4xl font-bold text-primary-600">
-      {displayValue}{suffix}
+    <div className="counter text-3xl md:text-4xl font-bold text-primary-600">
+      {displayValue}
+      {suffix}
     </div>
   );
-} 
+}
